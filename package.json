@@ -5,6 +5,8 @@
   "author": "Philipp Hancke <fippo@andyet.net>",
   "dependencies": {
     "async": "^0.9.0",
+    "blob": "0.0.4",
+    "filereader": "^0.10.3",
     "iana-hashes": "^1.0.0",
     "webrtcsupport": "^1.0.0",
     "wildemitter": "1.x"
@@ -13,7 +15,7 @@
     "browserify": "3.x",
     "precommit-hook": "^1.0.0"
   },
-  "homepage": "https://github.com/simplewebrtc/filetransfer",
+  "homepage": "https://github.com/markr79/filetransfer",
   "keywords": [
     "webrtc",
     "simplewebrtc",
