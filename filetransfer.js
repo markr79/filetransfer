@@ -5,7 +5,7 @@ var util = require('util');
 var hashes = require('iana-hashes');
 var window = window || {}
 var FileReader = window.FileReader || require('filereader');
-var Blob = window.FileReader || require('blob');
+var Blob = window.Blob || require('blob');
 
 function Sender(opts) {
     WildEmitter.call(this);
