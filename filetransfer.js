@@ -133,7 +133,6 @@ function Receiver(opts) {
     });
   }
 
-  console.log('>>> fileopen', this);
   try {
     this.receiveStream = fs.createWriteStream(this.filepath, {
       flags: this.config.flags || 'w',
@@ -172,7 +171,6 @@ Receiver.prototype.receive = function(metadata, channel) {
     if (!self.receiveStream) return;
     var len = event.data.byteLength;
     self.received += len;
-    console.trace('onmessage', len, typeof event.data, utils.inspect(self.channel));
     try {
       if (typeof data === 'string') {
         self.receiveStream.write(event.data);
@@ -197,7 +195,7 @@ Receiver.prototype.receive = function(metadata, channel) {
       }
       // console.log('>>> file received', Blob);
       self.receiveStream.on('finish', function() {
-        console.log('>>>> received file', self.filepath, self.metadata);
+        console.log('filetransfer: received file', self.filepath, self.metadata);
         self.emit('receivedFile', basename, self.metadata);
       });
 
