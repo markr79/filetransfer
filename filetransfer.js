@@ -196,7 +196,7 @@ Receiver.prototype.receive = function(metadata, channel) {
       // console.log('>>> file received', Blob);
       self.receiveStream.on('finish', function() {
         console.log('filetransfer: received file', self.filepath, self.metadata);
-        self.emit('receivedFile', basename, self.metadata);
+        self.emit('receivedFile', self.filepath, self.metadata);
       });
 
       self.receiveStream.end();
