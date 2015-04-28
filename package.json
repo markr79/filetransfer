@@ -5,10 +5,9 @@
   "author": "Philipp Hancke <fippo@andyet.net>",
   "dependencies": {
     "async": "^0.9.0",
-    "blob": "0.0.4",
-    "filereader": "^0.10.3",
     "iana-hashes": "^1.0.0",
-    "webrtcsupport": "^1.0.0",
+    "lodash": "^3.7.0",
+    "node-uuid": "^1.4.3",
     "wildemitter": "1.x"
   },
   "devDependencies": {
