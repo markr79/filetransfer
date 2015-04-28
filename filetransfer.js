@@ -2,8 +2,7 @@ var async = require('async');
 var WildEmitter = require('wildemitter');
 var util = require('util');
 var hashes = require('iana-hashes');
-var window = window || {}
-var FileReader = window.FileReader || require('filereader');
+
 var fs = require('fs');
 var each = require('lodash.foreach');
 var uuid = require('node-uuid');
